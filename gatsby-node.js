@@ -5,8 +5,6 @@
  */
 
 // You can delete this file if you're not using it
-<<<<<<< HEAD
-=======
 const path = require('path')
 exports.createPages = ({ actions, graphql }) => {
     const {createPage} = actions;
@@ -39,4 +37,3 @@ exports.createPages = ({ actions, graphql }) => {
         })
     })
 }
->>>>>>> initial commit
