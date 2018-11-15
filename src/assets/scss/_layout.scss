@@ -1,0 +1,79 @@
+.hero {
+    min-height: 100vh;
+    width: 100vw;
+    padding: 1em 3em;
+    color: $white;
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 200;
+    a {
+        color: $white;
+    }
+    .navigation {
+        align-self: flex-end;
+        @media screen and (max-width: 735px) {
+            align-self: center;
+        }
+        a {
+            text-transform: uppercase;
+            position: relative;
+            &:hover {
+                color: $red;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                bottom: -5px;
+                left: 0;
+                background-color: currentcolor;
+                visibility: hidden;
+                transform: scaleX(0);
+                transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+            }
+            &:hover:before {
+                opacity: 1;
+                visibility: visible;
+                transform: scaleX(1);
+            }
+        }
+    }
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 600px;
+        text-align: center;
+        h1 {
+            >a {
+                color: $red;
+            }
+        }
+    }
+    .socialmedia {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        align-self: stretch;
+        @media screen and (max-width: 735px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    .credits {
+        i {
+            color: $red;
+        }
+    }
+    .list {
+        display: flex;
+        .listitem {
+            padding: 10px;
+        }
+    }
+}

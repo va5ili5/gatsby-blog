@@ -1,4 +1,5 @@
 import React from 'react'
+<<<<<<< HEAD
 import { Link } from 'gatsby'
 
 const Header = ({ siteTitle }) => (
@@ -28,6 +29,11 @@ const Header = ({ siteTitle }) => (
       </h1>
     </div>
   </div>
+=======
+
+const Header = () => (
+  <div></div>
+>>>>>>> initial commit
 )
 
 export default Header

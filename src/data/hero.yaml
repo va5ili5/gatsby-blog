@@ -1,0 +1,16 @@
+main:  
+  intro:  Hi, I am
+  title:  Vasilis
+  url:  /
+  tagline:  an experienced web developer who loves to build things using the Microsoft .NET framework, HTML5, CSS3 and Javascript.
+
+contact:
+  - media:  https://twitter.com/vasilisdev
+    icon:  fab fa-twitter
+  - media:  https://github.com/va5ili5
+    icon:  fab fa-github
+  - media:  mailto:vasiliss_b@hotmail.com
+    icon:  fa fa-envelope
+
+twitter:  https://twitter.com/vasilisdev
+gatsby:  https://www.gatsbyjs.org

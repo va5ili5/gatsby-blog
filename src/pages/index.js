@@ -1,4 +1,5 @@
 import React from 'react'
+<<<<<<< HEAD
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -13,6 +14,14 @@ const IndexPage = () => (
       <Image />
     </div>
     <Link to="/page-2/">Go to page 2</Link>
+=======
+
+import Layout from '../components/layout'
+import Hero from '../components/hero'
+const IndexPage = () => (
+  <Layout>
+    <Hero />
+>>>>>>> initial commit
   </Layout>
 )
 

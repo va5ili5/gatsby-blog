@@ -1,0 +1,29 @@
+import React from 'react'
+import { graphql } from 'gatsby';
+
+const Template = ({data}) => {
+    const { markdownRemark:post} = data;
+
+    return(
+        <div>
+            <h1>{post.frontmatter.title}</h1>
+            <div dangerouslySetInnerHTML={{__html:post.html}} />
+        </div>
+    )
+}
+
+export const postQuery = graphql`
+    query BlogPostByPath($path: String!) {
+        markdownRemark(frontmatter: { path: { eq: $path }}) {
+        html
+        frontmatter {
+            title
+            path
+            date
+            author
+        }
+        }
+    }
+`
+
+export default Template;
