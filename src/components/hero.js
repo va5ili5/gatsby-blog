@@ -12,7 +12,7 @@ const Hero = () => (
       ))}
       </ul>
     </nav>
-    <div className="title">
+    <div className="hero-title">
       <p>{herodata.main.intro}</p>
       <h1>
         <Link to={herodata.main.url}>{herodata.main.title}</Link>
@@ -29,7 +29,7 @@ const Hero = () => (
                 </li>
             ))}
       </ul>
-      <div className="credits">
+      <div className="hero-credits">
         <p>Design &amp; Developed by  <a href={herodata.twitter}>@va5ili5</a> with <i className="fas fa-heart"></i> and <a href={herodata.gatsby}>gatsby.js</a></p>
       </div>
     </div>

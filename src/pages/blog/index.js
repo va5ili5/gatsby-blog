@@ -1,31 +1,39 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
+import Header from '../../components/header'
 import Post from '../../components/post'
 const IndexPage = ({ data }) => {
 
     const { allMarkdownRemark: posts } = data;
     return (
         <Layout>
-            {posts.edges.map((post,i) => (
-                <Post key={i} post={post}/>
-            ))}
-            <section className="Blog">
-                <h1>Blog</h1>
+            <Header />
+            <section className="container">
+                <div className="flex-container">
+                    {posts.edges.map((post, i) => (
+                        <Post key={i} post={post} />
+                    ))}
+                </div>
             </section>
+
         </Layout>
     )
 }
-export const pageQuery = graphql`
+export const page2Query = graphql`
     query IndexQuery{
-        allMarkdownRemark(limit:10) {
+        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }
+            limit: 1000) {
             edges {
               node {
+                excerpt(pruneLength: 250)
                 id
                 frontmatter {
                   title
+                  date
                   path
                   author
+                  tags
                 }
               }
             }

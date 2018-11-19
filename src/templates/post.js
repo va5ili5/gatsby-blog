@@ -1,14 +1,29 @@
 import React from 'react'
 import { graphql } from 'gatsby';
+import { Link } from 'gatsby'
+import Layout from '../components/layout';
+import Header from '../components/header'
+const Posts = ({ data }) => {
+    const { markdownRemark: post } = data;
 
-const Template = ({data}) => {
-    const { markdownRemark:post} = data;
-
-    return(
-        <div>
-            <h1>{post.frontmatter.title}</h1>
-            <div dangerouslySetInnerHTML={{__html:post.html}} />
-        </div>
+    return (
+        <Layout>
+            <Header />
+            <section className="container">
+                <div className="flex-container">
+                    <h3 className="title">{post.frontmatter.title}</h3>
+                    <div className="credits">
+                        <p><i className="fa fa-clock"></i><span>{post.frontmatter.date}</span></p>
+                        <p><i className="fa fa-user"></i><span>{post.frontmatter.author}</span></p>
+                    </div>
+                    <div className="post-text" dangerouslySetInnerHTML={{ __html: post.html }} />
+                    <span className="tags"><i className="fa fa-tag"></i></span>{post.frontmatter.tags.map((tag, i) => (
+                        <Link className="tags-links" key={i} to={`/tags/${tag}`}>
+                            <span>#</span>{tag}
+                        </Link>))}
+                </div>
+            </section>
+        </Layout>
     )
 }
 
@@ -21,9 +36,10 @@ export const postQuery = graphql`
             path
             date
             author
+            tags
         }
         }
     }
 `
 
-export default Template;
+export default Posts;

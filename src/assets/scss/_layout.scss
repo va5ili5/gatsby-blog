@@ -1,48 +1,30 @@
+.container {
+    max-width: 980px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px 0;
+}
+
 .hero {
     min-height: 100vh;
     width: 100vw;
     padding: 1em 3em;
     color: $white;
-    background-color: $black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    font-weight: 200;
+    font-weight: 400; //opacity: 0.7;
     a {
         color: $white;
     }
-    .navigation {
-        align-self: flex-end;
-        @media screen and (max-width: 735px) {
-            align-self: center;
-        }
-        a {
-            text-transform: uppercase;
-            position: relative;
-            &:hover {
-                color: $red;
-            }
-            &:before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 1px;
-                bottom: -5px;
-                left: 0;
-                background-color: currentcolor;
-                visibility: hidden;
-                transform: scaleX(0);
-                transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-            }
-            &:hover:before {
-                opacity: 1;
-                visibility: visible;
-                transform: scaleX(1);
-            }
-        }
-    }
-    .title {
+    .hero-title {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -56,24 +38,133 @@
     }
     .socialmedia {
         display: flex;
-        align-items: baseline;
         justify-content: space-between;
         align-self: stretch;
+        align-items: center;
         @media screen and (max-width: 735px) {
             flex-direction: column;
             align-items: center;
             text-align: center;
         }
     }
-    .credits {
+    .hero-credits {
         i {
             color: $red;
         }
     }
-    .list {
-        display: flex;
-        .listitem {
-            padding: 10px;
+}
+
+.header {
+    @extend .container;
+    min-height: 100px;
+}
+
+.header-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        font-weight: 400; //opacity: 0.7;
+        color: $white;
+    }
+}
+
+.post-item {
+    margin-bottom: 40px;
+    border-bottom: 1px solid $red;
+    .read-more {
+        margin: 20px 0;
+        a {
+            color: $red;
         }
     }
+}
+
+.title {
+    color: $red;
+}
+
+.post-text {
+    color: $light-gray;
+    p{
+        margin-bottom: 20px;
+    }
+}
+
+.credits {
+    display: flex;
+    color: $white;
+    margin-bottom: 20px;
+    p {
+        text-transform: uppercase;
+        color: $white;
+        margin-right: 10px;
+    }
+    span,
+    i {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+}
+
+.navigation {
+    align-self: flex-end;
+    @media screen and (max-width: 735px) {
+        align-self: center;
+    }
+    a {
+        text-transform: uppercase;
+        position: relative;
+        font-size: 0.9em;
+        &:hover {
+            color: $red;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: currentcolor;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+        }
+        &:hover:before {
+            opacity: 1;
+            visibility: visible;
+            transform: scaleX(1);
+        }
+    }
+}
+
+.list {
+    display: flex;
+    .listitem {
+        padding: 10px;
+
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+}
+
+.tags-links {
+    padding: 2px 0;
+    margin-right: 10px;
+    border-bottom: 1px groove $red;
+    color: $red;
+}
+
+.tags{
+    margin-right: 10px;
+    i{
+        color: $red;
+    }
+}
+
+.tag-link{
+    color:$white;
 }
