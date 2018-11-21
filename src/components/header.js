@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import menu from '../data/nav.yaml'
-import header from '../data/blog.yaml'
 
-const Header = () => (
+const Header = (props) => (
   <header className="header">
     <div className="header-container">
+    <div className="header-menu">
       <h2>
-        <Link to={header.header.url}>{header.header.title}</Link></h2>
+        <Link to='/'>Vasilis</Link></h2>
       <nav className="navigation">
         <ul className="list">
           {menu.map(({ title, url }, i) => (
@@ -15,6 +15,15 @@ const Header = () => (
           ))}
         </ul>
       </nav>
+      </div>
+      <div  className="header-title">
+        <h3>
+            {props.title}
+        </h3>
+        <p>
+        {props.tagline}
+        </p>
+      </div>
     </div>
   </header>
 )

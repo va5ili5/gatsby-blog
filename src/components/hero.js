@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import herodata from '../data/hero.yaml'
+import contact from '../data/contact.yaml'
 import menu from '../data/nav.yaml'
 
 const Hero = () => (
@@ -13,24 +13,24 @@ const Hero = () => (
       </ul>
     </nav>
     <div className="hero-title">
-      <p>{herodata.main.intro}</p>
+      <p>Hi, I am</p>
       <h1>
-        <Link to={herodata.main.url}>{herodata.main.title}</Link>
+        <Link to='/'>Vasilis</Link>
       </h1>
-      <p>{herodata.main.tagline}</p>
+      <p>an experienced web developer who loves to build things using the Microsoft .NET framework, HTML5, CSS3 and Javascript.</p>
     </div>
     <div className="socialmedia">
       <ul className="list">
-      {herodata.contact.map(({ media, icon }, i) => (
+      {contact.map(({ url, icon }, i) => (
                 <li key={i} className="listitem">
-                    <a href={media}>
+                    <a href={url}>
                       <i className={icon}></i>
                     </a>
                 </li>
             ))}
       </ul>
       <div className="hero-credits">
-        <p>Design &amp; Developed by  <a href={herodata.twitter}>@va5ili5</a> with <i className="fas fa-heart"></i> and <a href={herodata.gatsby}>gatsby.js</a></p>
+        <p>Designed &amp; Developed by  <a href={contact[0].url}>{contact[0].username}</a> with <i className="fas fa-heart"></i> and <a href='https://www.gatsbyjs.org'>gatsby.js</a></p>
       </div>
     </div>
   </section>

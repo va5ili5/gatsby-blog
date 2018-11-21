@@ -3,12 +3,16 @@ import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Header from '../../components/header'
 import Post from '../../components/post'
+
 const IndexPage = ({ data }) => {
 
     const { allMarkdownRemark: posts } = data;
+    const title = 'Welcome to my blog';
+    const tagline = 'I usually write about .NET development and front-end stuff that I work.';
+
     return (
         <Layout>
-            <Header />
+            <Header title={title} tagline={tagline}/>
             <section className="container">
                 <div className="flex-container">
                     {posts.edges.map((post, i) => (
