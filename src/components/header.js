@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import menu from '../data/nav.yaml'
+import menu from '../data/nav.yml'
 
 const Header = (props) => (
   <header className="header">
@@ -15,14 +15,6 @@ const Header = (props) => (
           ))}
         </ul>
       </nav>
-      </div>
-      <div  className="header-title">
-        <h3>
-            {props.title}
-        </h3>
-        <p>
-        {props.tagline}
-        </p>
       </div>
     </div>
   </header>

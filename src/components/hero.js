@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import contact from '../data/contact.yaml'
-import menu from '../data/nav.yaml'
+import contact from '../data/contact.yml'
+import menu from '../data/nav.yml'
 
 const Hero = () => (
   <section className="hero">

@@ -1,0 +1,110 @@
+name:  Vasileios Boukonis
+contact:
+  - media:  twitter
+    url:  https://twitter.com/vasilisdev
+    icon:  fab fa-twitter
+  - media:  github
+    url:  https://github.com/va5ili5
+    icon:  fab fa-github
+  - media:  linkedin
+    url:  https://www.linkedin.com/in/vboukonis/
+    icon:  fab fa-linkedin-in
+  - media:  e-mail  
+    url:  mailto:vasiliss_b@hotmail.com
+    icon:  fa fa-envelope
+summary:  I am a .NET web developer and front-end engineer living and breathing in
+        Thessaloniki, Greece. I have 7 years of professional experience working
+        with the web. Over the years of my career I had the opportunity to work
+        from simple responsive websites to large, complex business web
+        applications and RESTful APIs. Most of my coding experience was built
+        upon the .NET stack, HTML5, CSS3 and Javascript. Currently focused on
+        the modern client side javascript frameworks.
+experience:
+  - position:  Software Engineer
+    company:  Validata Group
+    url:  https://www.validata-software.com/
+    location:  Thessaloniki - Greece
+    duration:  February 2018 - September 2018
+    description:  At Validata Group I was member of the development team responsible for the maintenance and implementation of new features for the ATS platform.
+                  Also I experimented with the Vue.js front-end library and implemented a demo application for evaluating purposes.
+  - position:  Software Engineer
+    company:  Intrasoft International
+    url:  https://www.intrasoft-intl.com/
+    location:  Thessaloniki - Greece
+    duration:  June 2016 to January 2018
+    description:  As Software Enginner at Intrasoft Internation I had the opportunity to work on the maintenance and development of the ERA 
+                  (EU Agency for Railways) web applications. The technologies used on daily bases were git, C#, VB.NET, t-SQL. For the front-end developement 
+                  were used HTML5, CSS3, Javascript and jQuery.
+  - position:  Software Engineer
+    company:  Interworks Cloud
+    url:  https://interworks.cloud
+    location:  Thessaloniki - Greece
+    duration:  October 2013 - May 2016
+    description:  At Interworks Cloud I was member of the development team responsible for the maintenance and implementation of new features for the BSS 
+                  and Storefront cloud platforms. I was also the main developer that designed, implemented, tested and documented the Storefront REST API.
+                  As Software Engineer I worked with Visual Studio, SQL Server Management Studio writing C#, VB.NET, t-SQL and also for the front-end developement 
+                  I worked with HTML5, CSS3, Javascript and jQuery.
+  - position:  Web Developer
+    company:  Marmalade GmbH
+    url:  https://www.marmalade.de
+    location:  Magdeburg - Germany
+    duration:  October 2012 - July 2013
+    description:  At Marmalade GmbH I worked as Web Developer. I was mainly responsible for the development of hand crafted responsive websites. The technologies used were
+                  git, PHP, HTML5, CSS3, Javascript and jQuery.
+  - position:  Intern Software Developer
+    company:  ELSOP Consulting Group - SAP Partner
+    url:  https://www.elsop.gr
+    location:  Athens - Greece
+    duration:  January 2012 - July 2012
+    description:  During my internship at ELSOP I had the opportunity to introduce to SAP ecosystem and the ABAP programming language. I was also involved in the process of building
+                  mobile applications using Java and the SAP HANA Cloud Platform.
+education:
+  -  school: University of Macedonia
+     location:  Thessaloniki - Greece
+     degree:  Bachelor in Applied Informatics
+     date:  2009 - 2011
+     grade:  Overall GPA 7.33/10.00
+  -  school: Alexander Technological Educational Institute of Thessaloniki
+     location:  Thessaloniki - Greece
+     degree:  Bachelor in Food Science Technology
+     date:  1997 - 2003
+     grade:  Overall GPA 6.55/10.00
+  -  school: Kastoria High School
+     location:  Kastoria - Greece
+     degree:  High School Diploma
+     date:  1995 - 1997
+     grade:  Overall GPA 17.30/20.00
+skills:
+  -  skill:
+      title:  "Programming Languages:"
+      values:  C#, Visual Basic, t-SQL, PHP
+  -  skill:  
+      title:  "Web Technologies & Frameworks:"
+      values:  HTML5, CSS3, React.js, Vue.js
+  -  skill:  
+      title:  "Scripts/UI:"
+      values:  JavaScript, jQuery, Ajax, Bootstrap, SASS, SCSS, LESS, gulp
+  -  skill:  
+      title:  "Databases and ORM:"
+      values:   MS-SQL Server, Entity Framework, MySQL, noSQL(CouchDB)
+  -  skill:  
+      title:  "Microsoft Technologies:"
+      values:   .NET Framework, ASP.NET WebForms, ASP.NET MVC, ASP.NET WebApi, ASP.NET Core
+  -  skill:
+      title:  "Version Control:"
+      values:   git, TFS
+  -  skill:  
+      title:  "Development Tools:"
+      values:   Visual Studio, Visual Studio Code, SQL Server Management Studio
+  -  skill:  
+      title:  "Operating Systems:"
+      values:  Microsoft Windows, Linux(Mint)
+softskills:
+  -  sskill:  Ability to comprehend the business context.
+  -  sskill:  Ability to analyze complex business concepts and break down to smaller tasks.
+  -  sskill:  Ability to work as a team member and also as an individual.
+  -  sskill:  Ability to share and communicate technical details with non-technical departments (e.g. Marketing, Sales)
+languages:
+  -  language:  Greek (mother tongue)
+  -  language:  English (fluent)
+  -  language:  German (basic)

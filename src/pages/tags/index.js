@@ -8,7 +8,7 @@ import kebabCase from "lodash/kebabCase"
 import { Link, graphql } from "gatsby"
 import Layout from '../../components/layout'
 import Header from '../../components/header'
-
+import Footer from '../../components/footer'
 const IndexPage = ({
   data: {
     allMarkdownRemark: { group }
@@ -17,7 +17,6 @@ const IndexPage = ({
     <Layout>
       <Header />
       <section className="container">
-        <div className="flex-container">
           <h3 className="title">Tags</h3>
           <ul>
             {group.map(tag => (
@@ -28,8 +27,8 @@ const IndexPage = ({
               </li>
             ))}
           </ul>
-        </div>
       </section>
+      <Footer/>
     </Layout>
   )
 

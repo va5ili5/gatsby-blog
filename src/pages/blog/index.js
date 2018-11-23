@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Header from '../../components/header'
 import Post from '../../components/post'
+import Footer from '../../components/footer'
 
 const IndexPage = ({ data }) => {
 
@@ -12,15 +13,13 @@ const IndexPage = ({ data }) => {
 
     return (
         <Layout>
-            <Header title={title} tagline={tagline}/>
+            <Header title={title} tagline={tagline} />
             <section className="container">
-                <div className="flex-container">
-                    {posts.edges.map((post, i) => (
-                        <Post key={i} post={post} />
-                    ))}
-                </div>
+                {posts.edges.map((post, i) => (
+                    <Post key={i} post={post} />
+                ))}
             </section>
-
+            <Footer />
         </Layout>
     )
 }
