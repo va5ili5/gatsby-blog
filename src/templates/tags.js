@@ -17,7 +17,6 @@ const Tags = ({ pageContext, data }) => {
     <Layout>
       <Header />
       <section className="container">
-        <div className="flex-container">
           <h3 className="title">{tagHeader}</h3>
           <ul>
             {edges.map(({ node }) => {
@@ -30,7 +29,6 @@ const Tags = ({ pageContext, data }) => {
             })}
           </ul>
           <Link className="tag-link" to="/tags">All tags</Link>
-        </div>
       </section>
       <Footer/>
     </Layout>

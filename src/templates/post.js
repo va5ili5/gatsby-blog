@@ -11,7 +11,6 @@ const Posts = ({ data }) => {
         <Layout>
             <Header />
             <section className="container">
-                <div className="flex-container">
                     <h3 className="title">{post.frontmatter.title}</h3>
                     <div className="credits">
                         <p><i className="fa fa-clock"></i><span>{post.frontmatter.date}</span></p>
@@ -22,7 +21,6 @@ const Posts = ({ data }) => {
                         <Link className="tags-links" key={i} to={`/tags/${tag}`}>
                             <span>#</span>{tag}
                         </Link>))}
-                </div>
             </section>
             <Footer/>
         </Layout>
