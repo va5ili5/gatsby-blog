@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Layout from '../components/layout';
 import Header from '../components/header'
+import Footer from '../components/footer'
 // Components
 import { Link, graphql } from "gatsby"
 
@@ -31,6 +32,7 @@ const Tags = ({ pageContext, data }) => {
           <Link className="tag-link" to="/tags">All tags</Link>
         </div>
       </section>
+      <Footer/>
     </Layout>
   )
 }
