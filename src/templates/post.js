@@ -10,6 +10,7 @@ const Posts = ({ data }) => {
     return (
         <Layout>
             <Header />
+            <main>
             <section className="container">
                     <h3 className="title">{post.frontmatter.title}</h3>
                     <div className="credits">
@@ -22,6 +23,7 @@ const Posts = ({ data }) => {
                             <span>#</span>{tag}
                         </Link>))}
             </section>
+            </main>
             <Footer/>
         </Layout>
     )

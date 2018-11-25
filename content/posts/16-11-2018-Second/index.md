@@ -7,13 +7,3 @@ tags: ['javascript', 'css']
 ---
 
 Hello second world!
-```javascript
-const code = "YO!!";
-// Check this out;
-
-import fish from 'fish';
-
-for (var i = 0; i < array.length; i++) {
-  console.log(array[i]);
-}
-```

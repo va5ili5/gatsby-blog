@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import contact from '../data/contact.yml'
 
 const Footer = (props) => (
