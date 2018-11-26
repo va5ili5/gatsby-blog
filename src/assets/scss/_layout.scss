@@ -253,7 +253,7 @@ main {
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
     .container {
-        background-color: red;
+        //background-color: red;
     }
 }
 
@@ -271,13 +271,13 @@ main {
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
     .container {
-        background-color: green;
+        //background-color: green;
     }
 }
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
     .container {
-        background-color: blue;
+        //background-color: blue;
     }
 }

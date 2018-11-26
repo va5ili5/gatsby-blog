@@ -4,13 +4,10 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import resume from '../data/resume.yml'
 
-const Resume = () => {
-    const title = 'My Resume';
-    const tagline = 'Here you can find details about my professional experience and the positions I have worked.';
-
-    return (
-        <Layout>
-            <Header title={title} tagline={tagline} />
+const Resume = () => (
+    <Layout>
+        <Header />
+        <main>
             <section className="container">
                 <h3 className="title">{resume.name}</h3>
                 <div className="resume-data">
@@ -93,10 +90,10 @@ const Resume = () => {
                     ))}
                 </div>
             </section>
-            <Footer />
-        </Layout>
-    )
-}
+        </main>
+        <Footer />
+    </Layout>
+)
 
 
 export default Resume;

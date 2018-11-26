@@ -8,17 +8,17 @@ import Footer from '../../components/footer'
 const IndexPage = ({ data }) => {
 
     const { allMarkdownRemark: posts } = data;
-    const title = 'Welcome to my blog';
-    const tagline = 'I usually write about .NET development and front-end stuff that I work.';
 
     return (
         <Layout>
-            <Header title={title} tagline={tagline} />
-            <section className="container">
-                {posts.edges.map((post, i) => (
-                    <Post key={i} post={post} />
-                ))}
-            </section>
+            <Header />
+            <main>
+                <section className="container">
+                    {posts.edges.map((post, i) => (
+                        <Post key={i} post={post} />
+                    ))}
+                </section>
+            </main>
             <Footer />
         </Layout>
     )

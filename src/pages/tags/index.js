@@ -15,8 +15,9 @@ const IndexPage = ({
   }
 }) => (
     <Layout>
-      <Header />
-      <section className="container">
+      <main>
+        <Header />
+        <section className="container">
           <h3 className="title">Tags</h3>
           <ul>
             {group.map(tag => (
@@ -27,8 +28,9 @@ const IndexPage = ({
               </li>
             ))}
           </ul>
-      </section>
-      <Footer/>
+        </section>
+      </main>
+      <Footer />
     </Layout>
   )
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import contact from '../data/contact.yml'
 
-const Footer = (props) => (
+const Footer = () => (
   <footer className="footer">
     <div className="footer-container">
     <div className="hero-credits">

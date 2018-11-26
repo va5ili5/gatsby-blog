@@ -16,7 +16,8 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <Header />
-      <section className="container">
+      <main>
+        <section className="container">
           <h3 className="title">{tagHeader}</h3>
           <ul>
             {edges.map(({ node }) => {
@@ -29,8 +30,9 @@ const Tags = ({ pageContext, data }) => {
             })}
           </ul>
           <Link className="tag-link" to="/tags">All tags</Link>
-      </section>
-      <Footer/>
+        </section>
+      </main>
+      <Footer />
     </Layout>
   )
 }
