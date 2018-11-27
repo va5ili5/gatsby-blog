@@ -15,8 +15,8 @@ const IndexPage = ({
   }
 }) => (
     <Layout>
+      <Header />
       <main>
-        <Header />
         <section className="container">
           <h3 className="title">Tags</h3>
           <ul>
