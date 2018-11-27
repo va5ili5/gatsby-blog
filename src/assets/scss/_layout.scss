@@ -1,11 +1,10 @@
 #___gatsby > * {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
   }
 .wrapper {
     flex: 1 1 auto;
     display: flex;
-    flex-flow: column nowrap;
     min-height: 100vh;
 }
 main {
