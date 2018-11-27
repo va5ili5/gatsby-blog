@@ -30,16 +30,15 @@ const Resume = () => (
                 <div className="resume-data">
                     <h4>Experience</h4>
                     {resume.experience.map((exp, i) => (
-                        <div key={i}>
+                        <div key={i} className="description">
                             <div className="flex-header">
                                 <div className="flex-header-title">
-                                    <i className="fa fa-building pinfo"></i>
                                     <h5>{exp.position} @
                                             <a href={exp.url}>{exp.company}</a>
                                     </h5>
                                 </div>
                                 <div>
-                                    <p>{exp.duration}</p>
+                                    <p className="italic-text">{exp.duration}</p>
                                 </div>
                             </div>
                             <p>{exp.location}</p>
@@ -53,10 +52,10 @@ const Resume = () => (
                         <div key={i}>
                             <div className="flex-header">
                                 <div className="flex-header-title">
-                                    <i className="fas fa-university"></i><h5>{edu.school}</h5>
+                                    <h5>{edu.school}</h5>
                                 </div>
                                 <div>
-                                    <p>{edu.date}</p>
+                                    <p className="italic-text">{edu.date}</p>
                                 </div>
                             </div>
                             <p>{edu.location}</p>

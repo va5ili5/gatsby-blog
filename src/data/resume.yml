@@ -25,15 +25,16 @@ experience:
     url:  https://www.validata-software.com/
     location:  Thessaloniki - Greece
     duration:  February 2018 - September 2018
-    description:  At Validata Group I was member of the development team responsible for the maintenance and implementation of new features for the ATS platform.
-                  Also I experimented with the Vue.js front-end library and implemented a demo application for evaluating purposes.
+    description:  At Validata Group I was member of the development team responsible
+                   for the maintenance and implementation of new features for the ATS platform.
+                  Also I experimented with the Vue.js front-end library and implemented a demo application for evaluation purposes.
   - position:  Software Engineer
     company:  Intrasoft International
     url:  https://www.intrasoft-intl.com/
     location:  Thessaloniki - Greece
     duration:  June 2016 to January 2018
-    description:  As Software Enginner at Intrasoft Internation I had the opportunity to work on the maintenance and development of the ERA 
-                  (EU Agency for Railways) web applications. The technologies used on daily bases were git, C#, VB.NET, t-SQL. For the front-end developement 
+    description:  As Software Engineer at Intrasoft Internation I worked on the maintenance and the development of new features for the ERA 
+                  (EU Agency for Railways) web applications. The technologies used on daily bases were git, TFS, C\#, VB.NET, t-SQL. For the front-end developement 
                   were used HTML5, CSS3, Javascript and jQuery.
   - position:  Software Engineer
     company:  Interworks Cloud
@@ -42,7 +43,7 @@ experience:
     duration:  October 2013 - May 2016
     description:  At Interworks Cloud I was member of the development team responsible for the maintenance and implementation of new features for the BSS 
                   and Storefront cloud platforms. I was also the main developer that designed, implemented, tested and documented the Storefront REST API.
-                  As Software Engineer I worked with Visual Studio, SQL Server Management Studio writing C#, VB.NET, t-SQL and also for the front-end developement 
+                  As Software Engineer I worked on daily bases with C\#, VB.NET, t-SQL and also for the front-end developement 
                   I worked with HTML5, CSS3, Javascript and jQuery.
   - position:  Web Developer
     company:  Marmalade GmbH
@@ -56,7 +57,7 @@ experience:
     url:  https://www.elsop.gr
     location:  Athens - Greece
     duration:  January 2012 - July 2012
-    description:  During my internship at ELSOP I had the opportunity to introduce to SAP ecosystem and the ABAP programming language. I was also involved in the process of building
+    description:  During my internship at ELSOP I had the opportunity to introduce to the SAP ecosystem and the ABAP programming language. I was also involved in the process of building
                   mobile applications using Java and the SAP HANA Cloud Platform.
 education:
   -  school: University of Macedonia
