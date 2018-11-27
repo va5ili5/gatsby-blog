@@ -4,7 +4,7 @@
     min-height: 100vh;
 }
 main {
-    flex-grow: 1;
+    flex: 1;
   }
 .section-wrapper {
     background-color: $lighter-black;
@@ -84,6 +84,7 @@ main {
     justify-content: center;
     color: $white;
     text-align: center;
+    padding: 15px 0;
     i {
         color: $red;
     }
