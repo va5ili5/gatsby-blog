@@ -4,10 +4,12 @@ module.exports = {
     title: 'Vasilis Boukonis - Web Developer',
     description: 'Front-End and Back-End Web Developer beased in Thessaloniki, Greece.',
     keywords: 'Software Engineer, Developer, Web Frontend, Full Stack',
-    author: 'Vasilis Boukonis'
-
+    author: 'Vasilis Boukonis',
+    siteUrl: `https://vboukonis.netlify.com`
   },
   plugins: [
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-robots-txt',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
@@ -35,6 +37,12 @@ module.exports = {
         theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/images/vb-icon.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-57414704-1`,
       },
     },
     'gatsby-plugin-offline',
