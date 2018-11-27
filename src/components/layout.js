@@ -31,8 +31,10 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
+        <div className="main-container">
         <div className="wrapper">
           {children}
+        </div>
         </div>
       </>
     )}
