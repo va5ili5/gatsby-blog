@@ -16,9 +16,9 @@ html {
 body {
   font-family: $base-font-family;
   font-size: $medium-font-size;
-  font-weight: $medium-font-weight;
+  font-weight: $base-font-weight;
   line-height: $line-height;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.5px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   min-height: 100%;
@@ -31,12 +31,12 @@ h1{
 
 h2{
   font-size: 2.2em;
-  font-weight: 600;
+  font-weight: 200;
 }
 
 h3{
-  font-size: 1.7em;
-  font-weight: 400;
+  font-size: 1.8em;
+  font-weight: 500;
 }
 h4{
   font-size: 1.5em;
@@ -44,7 +44,7 @@ h4{
 }
 h5{
   font-size: 1.1em;
-  font-weight: 400;
+  font-weight: 600;
 }
 ul {
   padding: 0;
@@ -57,5 +57,5 @@ a {
 }
 
 section{
-  padding: 80px 20px;
+  padding: 40px 20px;
 }
