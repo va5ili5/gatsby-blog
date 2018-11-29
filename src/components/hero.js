@@ -4,7 +4,7 @@ import contact from '../data/contact.yml'
 import menu from '../data/nav.yml'
 
 const Hero = () => (
-  <section className="hero">
+  <div className="hero">
     <nav className="navigation">
       <ul className="list">
       {menu.map(({title, url}, i) =>(
@@ -12,14 +12,14 @@ const Hero = () => (
       ))}
       </ul>
     </nav>
-    <div className="hero-title">
+    <div className="hero-title text-center">
       <p>Hi, I am</p>
       <h1>
         <Link to='/'>Vasilis</Link>
       </h1>
       <p>an experienced web developer who loves to build things using the Microsoft .NET framework, HTML5, CSS3 and Javascript.</p>
     </div>
-    <div className="socialmedia">
+    <div className="socialmedia text-center">
       <ul className="list">
       {contact.map(({ url, icon }, i) => (
                 <li key={i} className="listitem">
@@ -33,7 +33,7 @@ const Hero = () => (
         <p>Designed &amp; Developed by  <a href={contact[0].url}>{contact[0].username}</a> with <i className="fas fa-heart"></i> and <a href='https://www.gatsbyjs.org'>gatsby.js</a></p>
       </div>
     </div>
-  </section>
+  </div>
 )
 
 export default Hero

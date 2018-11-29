@@ -8,7 +8,9 @@ const Post = (props) => (
       <p><i className="fa fa-clock"></i><span>{props.post.node.frontmatter.date}</span></p>
       <p><i className="fa fa-user"></i><span>{props.post.node.frontmatter.author}</span></p>
     </div>
-    <p className="post-text">{props.post.node.excerpt}</p>
+    <div className="content">
+      <p>{props.post.node.excerpt}</p>
+    </div>
     <span className="read-more">
       <Link key={props.post.node.id} to={props.post.node.frontmatter.path}>Read more</Link>
     </span>

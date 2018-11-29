@@ -4,7 +4,7 @@ import menu from '../data/nav.yml'
 
 const Header = (props) => (
   <header className="header">
-    <div className="header-container">
+    <div className="header-container center">
       <h2>
         <Link to='/'>Vasilis</Link></h2>
       <nav className="navigation">

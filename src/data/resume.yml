@@ -14,8 +14,8 @@ contact:
     icon:  fa fa-envelope
 summary:  I am a .NET web developer and front-end engineer living and breathing in
         Thessaloniki, Greece. I have 7 years of professional experience working
-        with the web. Over the years of my career I had the opportunity to work
-        from simple responsive websites to large, complex business web
+        with the web. Over the years of my career I have implemented various hand-crafted responsive websites 
+        and also I have worked with large, complex, business web
         applications and RESTful APIs. Most of my coding experience was built
         upon the .NET stack, HTML5, CSS3 and Javascript. Currently focused on
         the modern client side javascript frameworks.
@@ -26,15 +26,15 @@ experience:
     location:  Thessaloniki - Greece
     duration:  February 2018 - September 2018
     description:  At Validata Group I was member of the development team responsible
-                   for the maintenance and implementation of new features for the ATS platform.
-                  Also I experimented with the Vue.js front-end library and implemented a demo application for evaluation purposes.
+                   for the maintenance and implementation of new features for the ATS platform. The technologies used on daily bases were git, TFS, C#, VB.NET, t-SQL. For the front-end developement 
+                  were used HTML5, CSS3, Javascript and jQuery. Also I experimented with the Vue.js front-end library and implemented a demo application for evaluation purposes.
   - position:  Software Engineer
     company:  Intrasoft International
     url:  https://www.intrasoft-intl.com/
     location:  Thessaloniki - Greece
     duration:  June 2016 to January 2018
     description:  As Software Engineer at Intrasoft Internation I worked on the maintenance and the development of new features for the ERA 
-                  (EU Agency for Railways) web applications. The technologies used on daily bases were git, TFS, C\#, VB.NET, t-SQL. For the front-end developement 
+                  (EU Agency for Railways) web applications. The technologies used on daily bases were git, TFS, C#, VB.NET, t-SQL. For the front-end developement 
                   were used HTML5, CSS3, Javascript and jQuery.
   - position:  Software Engineer
     company:  Interworks Cloud
@@ -43,7 +43,7 @@ experience:
     duration:  October 2013 - May 2016
     description:  At Interworks Cloud I was member of the development team responsible for the maintenance and implementation of new features for the BSS 
                   and Storefront cloud platforms. I was also the main developer that designed, implemented, tested and documented the Storefront REST API.
-                  As Software Engineer I worked on daily bases with C\#, VB.NET, t-SQL and also for the front-end developement 
+                  As Software Engineer I worked on daily bases with C#, VB.NET, t-SQL and also for the front-end developement 
                   I worked with HTML5, CSS3, Javascript and jQuery.
   - position:  Web Developer
     company:  Marmalade GmbH

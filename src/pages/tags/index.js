@@ -17,7 +17,7 @@ const IndexPage = ({
     <Layout>
       <Header />
       <main>
-        <section className="container">
+        <section className="container center">
           <h3 className="title">Tags</h3>
           <ul>
             {group.map(tag => (

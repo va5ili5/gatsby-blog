@@ -1,276 +1,297 @@
-
-#___gatsby > * {
-  display: flex;
-  flex-direction: column;
+// ----------------------------------------------------------------------------
+// Utilities
+// ----------------------------------------------------------------------------
+// Fonts
+// -------------------------
+.italic-text {
+    font-style: italic;
 }
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+// Visibility
+// -------------------------
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+// ----------------------------------------------------------------------------
+// Mixins
+// ----------------------------------------------------------------------------
+@mixin flexbox( $flex-direction: row, $justify-content: flex-start, $align-items: stretch, $align-self: auto, $flex-wrap: nowrap, $flex-basis: auto, $flex-grow: 0, $flex-shrink: 1) {
+    @if not($flex-direction==row) {
+        flex-direction: $flex-direction;
+    }
+    @if not($justify-content==flex-start) {
+        justify-content: $justify-content;
+    }
+    @if not($align-items==stretch) {
+        align-items: $align-items;
+    }
+    @if not($align-self==auto) {
+        align-self: $align-self;
+    }
+    @if not($flex-wrap==nowrap) {
+        flex-wrap: $flex-wrap;
+    }
+    @if not($flex-basis==auto) {
+        flex-basis: $flex-basis;
+    }
+    @if not($flex-grow==0) {
+        flex-grow: $flex-grow;
+    }
+    @if not($flex-shrink==1) {
+        flex-shrink: $flex-shrink;
+    }
+    display: flex;
+}
+
+@function breakpoint($key) {
+    @return map-get($breakpoints, $key);
+}
+
+@mixin breakpoint($key) {
+    @media screen and (max-width: breakpoint($key)) {
+        @content;
+    }
+}
+
+// ----------------------------------------------------------------------------
+// Layout
+// ----------------------------------------------------------------------------
+#___gatsby>* {
+    @include flexbox($flex-direction: column);
+}
+
 .wrapper {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-main {
-  flex: 1 1 auto;
+    @include flexbox($flex-grow: 1, $flex-shrink: 1, $flex-basis: auto, $flex-direction: column);
+    min-height: 100vh;
 }
 
-.inner-container {
-  @extend .container;
-  display: flex;
-  flex-grow: 1;
-  padding: 0 $spacing-unit;
-  a {
-    font-weight: 200;
-    color: $white;
-  }
+main {
+    flex-grow: 1;
 }
 
 .container {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
 }
 
+.inner-container {
+    @extend .container;
+    @include flexbox($flex-grow: 1);
+    padding: 0 $spacing-unit;
+    a {
+        font-weight: $light-font-weight;
+        color: $white;
+    }
+}
+
+// Hero
+// -------------------------
 .hero {
-  min-height: 100vh;
-  width: 100vw;
-  padding: 0 1em;
-  background-color: $light-black;
-  color: $white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 100;
-  a {
-    color: $white;
-  }
-  .hero-title {
-    display: flex;
-    flex-direction: column;
-    max-width: 768px;
-    text-align: center;
-    h1 {
-      > a {
-        color: $red;
-      }
+    @include flexbox($flex-direction: column, $align-items: center, $justify-content: space-between);
+    min-height: 100vh;
+    width: 100vw;
+    padding: 0 1em;
+    background-color: $light-black;
+    font-weight: $lighter-font-weight;
+    p,
+    a {
+        color: $white;
     }
-  }
-  .socialmedia {
-    display: flex;
-    justify-content: space-between;
-    align-self: stretch;
-    align-items: center;
-    @media screen and (max-width: 735px) {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    .hero-title {
+        @include flexbox($flex-direction: column);
+        max-width: 40.5em;
+        a {
+            color: $red;
+        }
     }
-  }
-  .hero-credits {
-    i {
-      color: $red;
+    .socialmedia {
+        @include flexbox($justify-content: space-between, $align-self: stretch, $align-items: center);
+        @include breakpoint((medium)) {
+            @include flexbox($flex-direction: column, $align-items: center);
+        }
     }
-  }
+    .hero-credits {
+        i {
+            color: $red;
+        }
+    }
 }
 
 .header,
-footer {
-  background-color: $light-black;
-  min-height: 60px;
+.footer {
+    background-color: $light-black;
+    min-height: 3.75em;
 }
 
 //---------------------- HEADER ----------------------
 .header-container {
-  @extend .inner-container;
-  justify-content: space-between;
-  align-items: center;
-  .navigation {
-    align-self: initial;
-  }
-  h3 {
-    color: $white;
-  }
+    @extend .inner-container;
+    @include flexbox($justify-content: space-between, $align-items: center);
+    .navigation {
+        @include flexbox($align-self: initial);
+    }
+    h3 {
+        color: $white;
+    }
 }
 
 //---------------------- FOOTER ----------------------
 .footer-container {
-  @extend .inner-container;
-  justify-content: center;
-  color: $white;
-  font-weight: 300;
-  text-align: center;
-  padding: 15px 20px;
-  i {
-    color: $red;
-  }
+    @extend .inner-container;
+    @include flexbox($justify-content: center);
+    color: $white;
+    font-weight: 300;
+    padding: 15px 20px;
+    i {
+        color: $red;
+    }
 }
-
 
 //---------------------- POSTS LIST ----------------------
 .post-item {
-  margin-bottom: $spacing-unit;
-  border-bottom: 1px solid $red;
-  .read-more {
-    margin: 20px 0;
-    a {
-      color: $red;
+    margin-bottom: $spacing-unit * 2;
+    border-bottom: 1px solid $red;
+    .read-more {
+        a {
+            color: $red;
+        }
     }
-  }
 }
 
 .title {
-  color: $red;
+    color: $red;
 }
 
-.post-text {
-  p {
+.content p {
     margin-bottom: $spacing-unit;
-  }
 }
 
 .credits {
-  display: flex;
-  margin-bottom: 20px;
-  p {
-    color: $dark-gray;
-    margin-right: $spacing-unit/2;
-  }
-  span {
-    font-size: 14px;
-    vertical-align: middle;
-  }
-  i {
-    font-size: 10px;
-    margin-right: 5px;
-  }
+    @include flexbox();
+    margin-bottom: $spacing-unit/2;
+    p {
+        color: $dark-gray;
+        margin-right: $spacing-unit/2;
+    }
+    span {
+        font-size: 0.875em;
+        vertical-align: middle;
+    }
+    i {
+        font-size: 0.625em;
+        margin-right: 2px;
+    }
 }
 
 .navigation {
-  align-self: flex-end;
-  @media screen and (max-width: 735px) {
-    align-self: center;
-  }
-  a {
-    text-transform: uppercase;
-    position: relative;
-    font-size: 0.9em;
-    &:hover {
-      color: $red;
+    align-self: flex-end;
+    @include breakpoint((xsmall)) {
+        @include flexbox($align-self: stretch);
     }
-    &:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      bottom: -5px;
-      left: 0;
-      background-color: currentcolor;
-      visibility: hidden;
-      transform: scaleX(0);
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    a {
+        text-transform: uppercase;
+        position: relative;
+        font-size: 0.9em;
+        &:hover {
+            color: $red;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: currentcolor;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+        }
+        &:hover:before {
+            opacity: 1;
+            visibility: visible;
+            transform: scaleX(1);
+        }
     }
-    &:hover:before {
-      opacity: 1;
-      visibility: visible;
-      transform: scaleX(1);
-    }
-  }
 }
 
 .list {
-  display: flex;
-  .listitem {
-    padding: 10px;
-    &:last-child {
-      padding-right: 0;
+    @include flexbox();
+    .listitem {
+        padding: $spacing-unit/2;
+        &:last-child {
+            padding-right: 0;
+        }
     }
-  }
+    @include breakpoint((medium)) {
+        @include flexbox($justify-content: space-between, $flex-grow: 1);
+    }
 }
 
 .tags-links {
-  padding: 2px 0;
-  margin-right: 10px;
-  color: $red;
+    padding: 2px 0;
+    margin-right: $spacing-unit/3;
+    color: $red;
 }
 
 .tags {
-  margin-right: 10px;
-  i {
-    color: $red;
-  }
+    margin-right: $spacing-unit/3;
+    i {
+        color: $red;
+    }
 }
 
 .tag-link {
-  color: $red;
+    color: $red;
 }
 
 .resume-data {
-  padding: 20px 0;
-  h4 {
-    color: $red;
-  }
-  .contact {
-    .fab,
-    .fa {
-      margin-right: 10px;
-      color: $light-black;
+    padding: 0 0 $spacing-unit 0;
+    h4 {
+        color: $red;
     }
-  }
-  a {
-    color: $light-black;
-  }
-  .skill {
-    font-weight: 600;
-  }
-  .flex-header {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    .flex-header-title {
-      display: flex;
-      align-items: center;
+    .contact {
+        i {
+            margin-right: $spacing-unit/3;
+            color: $light-black;
+        }
     }
-  }
-}
-
-.description {
-  margin-bottom: $spacing-unit;
-}
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  .container {
-    //background-color: red;
-  }
+    a {
+        color: $light-black;
+    }
+    .skill {
+        font-weight: 600;
+    }
+    .description {
+        margin-bottom: $spacing-unit;
+        .description-header {
+            @include flexbox($justify-content: space-between);
+            .description-header-title {
+                @include flexbox($align-items: center);
+            }
+        }
+    }
 }
 
 // Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {
-  .resume-data .flex-header {
-    flex-direction: column;
-    .flex-header-title {
-      align-items: baseline;
+@include breakpoint((medium)) {
+    .description-header {
+        flex-direction: column;
+        .description-header-title {
+            align-items: baseline;
+        }
     }
-  }
-}
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {
-  .container {
-    //background-color: green;
-  }
-}
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {
-  .container {
-    //background-color: blue;
-  }
-}
-
-//utilities
-.italic-text {
-  font-style: italic;
 }

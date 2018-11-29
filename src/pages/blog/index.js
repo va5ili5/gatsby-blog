@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
         <Layout>
             <Header />
             <main>
-                <section className="container">
+                <section className="container center">
                     {posts.edges.map((post, i) => (
                         <Post key={i} post={post} />
                     ))}

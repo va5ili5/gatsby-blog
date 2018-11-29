@@ -8,7 +8,7 @@ const Resume = () => (
     <Layout>
         <Header />
         <main>
-            <section className="container">
+            <section className="container center">
                 <h3 className="title">{resume.name}</h3>
                 <div className="resume-data">
                     <h4>Contact Details</h4>
@@ -25,14 +25,16 @@ const Resume = () => (
                 </div>
                 <div className="resume-data">
                     <h4>Summary</h4>
-                    <p className="post-text">{resume.summary}</p>
+                    <div className="content">
+                        <p>{resume.summary}</p>
+                    </div>
                 </div>
                 <div className="resume-data">
                     <h4>Experience</h4>
                     {resume.experience.map((exp, i) => (
                         <div key={i} className="description">
-                            <div className="flex-header">
-                                <div className="flex-header-title">
+                            <div className="description-header">
+                                <div className="description-header-title">
                                     <h5>{exp.position} @
                                             <a href={exp.url}>{exp.company}</a>
                                     </h5>
@@ -42,16 +44,18 @@ const Resume = () => (
                                 </div>
                             </div>
                             <p>{exp.location}</p>
-                            <p>{exp.description}</p>
+                            <div className="content">
+                                <p >{exp.description}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
                 <div className="resume-data">
                     <h4>Education</h4>
                     {resume.education.map((edu, i) => (
-                        <div key={i}>
-                            <div className="flex-header">
-                                <div className="flex-header-title">
+                        <div key={i} className="description">
+                            <div className="description-header">
+                                <div className="description-header-title">
                                     <h5>{edu.school}</h5>
                                 </div>
                                 <div>
@@ -76,7 +80,7 @@ const Resume = () => (
                     <h4>Soft Skills</h4>
                     {resume.softskills.map((skill, i) => (
                         <div key={i}>
-                            <p>{skill.sskill}</p>
+                            <p className="content">{skill.sskill}</p>
                         </div>
                     ))}
                 </div>

@@ -17,7 +17,7 @@ const Tags = ({ pageContext, data }) => {
     <Layout>
       <Header />
       <main>
-        <section className="container">
+        <section className="container center">
           <h3 className="title">{tagHeader}</h3>
           <ul>
             {edges.map(({ node }) => {

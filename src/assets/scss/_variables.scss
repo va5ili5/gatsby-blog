@@ -1,6 +1,9 @@
+// Import Fonts
+// -------------------------
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900');
 
-//colors
+// Colors
+// -------------------------
 $white:#fff;
 $black:#000;
 $gray:#bebebe;
@@ -8,13 +11,25 @@ $light-black: lighten($black, 15%);
 $dark-gray: darken($gray, 36%);
 $red: #E31B6D;
 
-//typography
+// Typography
+// -------------------------
 $base-font-family:'Source Sans Pro', sans-serif;
 $base-font-weight: 400;
 $light-font-weight:300;
+$lighter-font-weight:100;
 $base-font-size:1em;
 $base-line-height: 2em;
 
-//layout
-$content-width: 980px;
-$spacing-unit:30px;
+// Breakpoints
+// -------------------------
+$breakpoints: (
+  xsmall:     28.125em,
+  small:      46.875em,
+  medium:     59.375em,
+  large:      75em
+);
+
+// Layout
+// -------------------------
+$content-width: 61.25em;
+$spacing-unit:1.875em;
