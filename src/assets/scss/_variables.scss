@@ -2,15 +2,19 @@
 
 //colors
 $white:#fff;
-$light-gray: #bbbbc4;
-$lighter-black:#252525;
-$light-black:#333;
 $black:#000;
+$gray:#bebebe;
+$light-black: lighten($black, 15%);
+$dark-gray: darken($gray, 36%);
 $red: #E31B6D;
 
 //typography
 $base-font-family:'Source Sans Pro', sans-serif;
 $base-font-weight: 400;
 $light-font-weight:300;
-$medium-font-size:1em;
-$line-height: 2em;
+$base-font-size:1em;
+$base-line-height: 2em;
+
+//layout
+$content-width: 980px;
+$spacing-unit:30px;

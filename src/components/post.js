@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const Post = (props) => (
-  <div className="post-item">
+  <article className="post-item">
     <h3 className="title">{props.post.node.frontmatter.title}</h3>
     <div className="credits">
       <p><i className="fa fa-clock"></i><span>{props.post.node.frontmatter.date}</span></p>
@@ -12,6 +12,6 @@ const Post = (props) => (
     <span className="read-more">
       <Link key={props.post.node.id} to={props.post.node.frontmatter.path}>Read more</Link>
     </span>
-  </div>
+  </article>
 )
 export default Post

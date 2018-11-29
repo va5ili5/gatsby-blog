@@ -15,9 +15,10 @@ html {
 
 body {
   font-family: $base-font-family;
-  font-size: $medium-font-size;
+  font-size: $base-font-size;
   font-weight: $base-font-weight;
-  line-height: $line-height;
+  line-height: $base-line-height;
+  color: $light-black;
   letter-spacing: 0.5px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
