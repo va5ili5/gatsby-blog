@@ -1,5 +1,5 @@
 ---
-path: '/no-on-gatsby'
+path: '/welcome'
 title: 'Just another Hello World post'
 author: 'Vasilis'
 date: '15/11/2018'
